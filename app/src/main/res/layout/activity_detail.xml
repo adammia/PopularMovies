@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+
+        <ImageView
+            android:id="@+id/iv_backdrop"
+            style="@style/MovieDetailHeader" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fab_favorites"
+            android:layout_margin="16dp"
+            app:layout_anchor="@id/iv_poster"
+            app:layout_anchorGravity="bottom|right|end"
+            android:src="@drawable/ic_favorite_border_black_24dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="80dp"
+                tools:context="com.example.kleocida.popularmovies.DetailActivity">
+
+                <TextView
+                    android:id="@+id/title_tv"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/card_details"
+                    style="@style/MovieDetailTextTitle" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_details"
+                    app:cardCornerRadius="6dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title_tv"
+                    style="@style/MovieDetailCard">
+
+                    <android.support.constraint.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <android.support.v7.widget.AppCompatRatingBar
+                            android:id="@+id/rating_rb"
+                            style="@style/Base.Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:isIndicator="false"
+                            android:numStars="5"
+                            android:rating="3.5"
+                            android:stepSize="0.1"
+                            android:theme="@style/RatingBar"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/overview_label"
+                            android:text="@string/overview_label"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            style="@style/MovieDetailTextLabel" />
+
+                        <TextView
+                            android:id="@+id/overview_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="gravity"
+                            android:textSize="15sp"
+                            app:layout_constraintStart_toStartOf="@+id/overview_label"
+                            app:layout_constraintTop_toBottomOf="@+id/overview_label" />
+
+                        <TextView
+                            android:id="@+id/release_date_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/release_date_label"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@+id/overview_tv"
+                            app:layout_constraintTop_toBottomOf="@+id/overview_tv" />
+
+                        <TextView
+                            android:id="@+id/release_date_tv"
+                            app:layout_constraintStart_toEndOf="@+id/release_date_label"
+                            app:layout_constraintTop_toTopOf="@+id/release_date_label"
+                            style="@style/MovieDetailDate" />
+
+
+                    </android.support.constraint.ConstraintLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/card_trailers"
+                    app:cardCornerRadius="6dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/card_details"
+                    style="@style/MovieDetailCardTrailers">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/rv_trailers">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="@dimen/card_width"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rv_reviews"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/card_trailers">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </android.support.constraint.ConstraintLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</layout>

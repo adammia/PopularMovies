@@ -1,0 +1,83 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!-- Movie details -->
+
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/TitleWhite</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+    </style>
+
+    <style name="MovieDetailHeader">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">256dp</item>
+        <item name="android:contentDescription">@string/backdrop</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="MovieDetailTextTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">end</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginTop">120dp</item>
+        <item name="android:gravity">end</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:shadowColor">@color/colorPrimaryDark</item>
+        <item name="android:shadowDx">8</item>
+        <item name="android:shadowDy">8</item>
+        <item name="android:shadowRadius">10</item>
+        <item name="android:textColor">@color/TitleWhite</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:maxWidth">@dimen/card_width</item>
+    </style>
+
+    <style name="MovieDetailCard">
+        <item name="android:layout_width">@dimen/card_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="MovieDetailTextLabel">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MovieDetailDate">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">28dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="MovieDetailCardTrailers">
+        <item name="android:layout_width">@dimen/card_width</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+
+</resources>

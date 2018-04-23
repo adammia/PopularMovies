@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+
+    <string name="menu_popular">Popular</string>
+    <string name="menu_top_rated">Top rated</string>
+    <string name="menu_favorites">Favorites</string>
+
+    <string name="poster">Poster picture</string>
+    <string name="backdrop">Backdrop picture</string>
+
+    <string name="overview_label">Overview:</string>
+    <string name="release_date_label">Release date:</string>
+    <string name="trailer_thumb">Trailers</string>
+
+    <string name="read_more">[read more]</string>
+    <string name="favorite_button">Favorite button</string>
+</resources>
