@@ -1,5 +1,5 @@
 # Popular Movies App
-This Popular Movies App (Project 2.) for Udacity's Android Developer Nanodegree by Google. For education purposes only!
+This Popular Movies App (Project 1-2.) for Udacity's Android Developer Nanodegree by Google. For education purposes only!
 https://youtu.be/sYYTHvY39rc
 
 ## Application secrets
